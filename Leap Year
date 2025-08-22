@@ -1,0 +1,32 @@
+Q.Input a year and check whether it’s a leap year or not.
+int main()
+{
+   int year; 
+    printf("Enter a year");
+    scanf("%d",&year);
+    if(year%100==0)
+    {
+        if(year%400==0)
+        {
+            printf("Leap Year");
+        }
+        else 
+        printf("Not a leap year");
+    }
+    else
+    {
+        if(year%4==0)
+        {
+            printf("Leap year");
+        }
+        else
+        {
+            printf("Not a leap year");
+        }
+    }
+
+Output:
+Enter a year2024
+Leap year
+
+=== Code Execution Successful ===
