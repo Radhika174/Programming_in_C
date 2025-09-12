@@ -1,0 +1,12 @@
+// Given two integers , divide them and print the result in float.
+#include <stdio.h>
+int main()
+{
+    int a;
+    float b;
+    printf("Enter numbers");
+    scanf("%d%f",&a,&b);
+    float div = a/b;
+    printf("Result= %f",div);
+return 0 ;
+}
