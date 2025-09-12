@@ -1,0 +1,25 @@
+// Write a program that prints the size(in bytes) of int float char double and long long using size of operator.
+#include <stdio.h>
+void bill();
+int main() 
+{
+    bill();
+    return 0;
+}
+ void bill()
+{
+    int n;
+    printf("Enter units:");
+    scanf("%d",&n);
+    double amount=0.0;
+    if(n<=100)
+    amount = (n*3)+50;
+    else if (n>100 && n<=300)
+    amount = 150+300+(n-100)*5;
+    else if (n>300 && n<=500)
+    amount = 250+300+1000+(n-300)*7;
+    else
+    amount =500+ 300+1000+1400+(n-500)*8;
+    printf("Electricity Bill = %lf",amount);
+    
+}
