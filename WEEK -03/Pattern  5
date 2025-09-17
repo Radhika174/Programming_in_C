@@ -1,0 +1,65 @@
+/* 
+          1 1 
+        1 2 1 2 
+      1 2 3 1 2 3 
+    1 2 3 4 1 2 3 4 
+  1 2 3 4 5 1 2 3 4 5 
+1 2 3 4 5 6 1 2 3 4 5 6 
+  1 2 3 4 5 1 2 3 4 5 
+    1 2 3 4 1 2 3 4 
+      1 2 3 1 2 3 
+        1 2 1 2 
+          1 1 
+
+*/
+#include <stdio.h>
+
+int main()
+{
+     int n=6;
+     int p=1;
+    for(int i=1;i<=n;i++)
+    {
+        for(int k=1;k<=n-i;k++)
+        {
+            printf("  ");
+        }
+         for (int j=1;j<=(i*2);j++)
+         {
+             if(j<=i)
+             printf("%d ",j);
+             else
+            {
+             printf("%d ",p);
+             p++;
+            }
+         }
+         printf("\n");
+         p=1;
+    }
+    int m=5;
+    int q=1;
+    for(int i=m;i>=1;i--)
+    {
+        for(int k=m-(i-1);k>=1;k--)
+        {
+            printf("  ");
+        }
+        for(int j=1;j<=(i*2);j++)
+        {
+            if(j<=i)
+           printf("%d ",j); 
+           else
+           {
+               printf("%d ",q);
+               q++;
+           }
+        }
+                 printf("\n");
+                 q=1;
+    }
+        
+    
+
+    return 0;
+}
