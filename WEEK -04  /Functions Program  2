@@ -1,0 +1,29 @@
+// Functions
+#include <stdio.h>
+int Add(int, int);
+int Mul(int,int);
+
+int main()
+{
+   int a,b;
+
+    printf("\n Enter the numbers:");
+    scanf("%d%d",&a,&b);
+    int p = Add(a,b);
+    int r = Mul(a,b);
+    printf(" Sum = %d",p);
+    printf(" Product = %d",r);
+
+    return 0;
+}
+ int Add(int a , int b)
+{
+   int sum=a+b;
+    return sum;
+   
+}
+int Mul(int a , int b)
+{
+    int pro = a*b;
+    return pro;
+}
