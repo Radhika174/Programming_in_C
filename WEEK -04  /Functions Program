@@ -1,0 +1,38 @@
+// Functions
+#include <stdio.h>
+void digitAdd(int);
+int digitSum(int);
+
+int main()
+{
+    int num;
+
+    printf("\n Enter the number:");
+    scanf("%d",&num);
+    digitAdd(num);
+    int r = digitSum(num);
+    printf("Digit square sum = %d",r);
+
+    return 0;
+}
+void digitAdd(int num)
+{
+    int sum=0;
+    while(num>0)
+    {
+        sum = sum+num%10;
+        num=num/10;
+    }
+    printf("\n Digits sum = %d",sum);
+}
+int digitSum(int num)
+{
+    int sum=0;
+    while(num>0)
+    {
+        int d = num%10;
+        sum=sum+(d*d);
+        num = num/10;
+    }
+    return sum;
+}
