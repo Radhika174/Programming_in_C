@@ -1,0 +1,23 @@
+//Function witout argument with return type
+#include <stdio.h>
+int fact();
+int main()
+{
+printf("Function call starts: \n");
+int f;
+f=fact();
+printf("The factorial is = %d",f);
+return 0;
+}
+int fact()
+{
+int num , f=1;
+printf("Enter your number \n");
+scanf("%d",&num);
+while(num>0)
+{
+f=f*num;
+num=num-1;
+}
+return f;
+}
