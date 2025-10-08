@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+   int n;
+   int m;
+   
+   printf("Enter the row size ");
+   scanf("%d",&n);
+   printf("Enter the column size");
+   scanf("%d",&m);
+   int a[n][n];
+   for(int i=0;i<n;++i)
+   {
+       for(int j=0;j<m;++j)
+       {
+          printf("Enter the number");
+          scanf("%d",&a[i][j]);
+       }
+   }
+    int sum=0;
+   
+   for(int i=0;i<n;++i)
+   {
+       for(int j=0;j<m;++j)
+       {
+           sum=0;
+          for(int k=j+1;k<m;++k)
+          {
+              sum=sum+a[i][k];
+          }
+          if(a[i][j]>sum)
+          printf("\nLeader no of row%d is  %d",i+1,a[i][j]);
+       }
+   }
+  sum=0;
+  for(int i=0;i<m;++i)
+   {
+       for(int j=0;j<n;++j)
+       {
+           sum=0;
+          for(int k=j+1;k<n;++k)
+          {
+              sum=sum+a[k][i];
+          }
+          if(a[j][i]>sum)
+          printf("\nLeader no of column %d is  %d",i+1,a[j][i]);
+       }
+   }
+  
+    return 0;
+}
