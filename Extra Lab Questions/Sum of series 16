@@ -1,0 +1,25 @@
+// Q16.Sum of series
+#include <stdio.h>
+#include <math.h>
+int main() 
+{
+   int n,x;
+    printf("Enter the value of n and x:");
+    scanf("%d%d",&n,&x);
+    
+    float sum=1.0;
+    int fact=1;
+    for(int j=1;j<=n;j++)
+    {
+     fact=1;
+    for(int i=1;i<=j;i++)
+    {
+      fact=fact*i;
+    }
+    sum=sum+(pow(x,j)/(float)fact);
+    }
+   
+    printf("Sum=%f",sum);
+
+    return 0;
+}
